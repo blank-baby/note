@@ -43,8 +43,6 @@ for (int i = 0; i <5 ; i++) {
 //直接结束第一层和第二层的循环
 ```
 
-
-
 ## 2.多态
 
 ### 1.前提：**需要两个类之间有继承关系**
@@ -305,3 +303,36 @@ run(new int[]{1,2})
 ### 5. private
 
 只有当前类可以访问
+
+## 5.时间格式转换
+
+```java
+SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+String time = sdf.format(new Date());
+System.out.println(time);
+
+// YYYY与yyyy
+// yyyy使用的是日历年，我们应该使用日历年这种方式
+// YYYY使用的是当前周所在的年份（Week of Year）。如果week（周）没有包含1月1日（没有跨年），那么week就属于当前所在的年如果week包含了1月1日（跨年了），那么week就属于新的一年。
+
+
+作者：过气的程序员DZ
+链接：https://www.jianshu.com/p/a4a307477c63
+来源：简书
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
+// MM与mm
+// MM 表示月份 mm表示分钟
+
+// DD与dd
+// DD表示在当年中的天数  dd表示在当月中的天数
+
+// HH与hh
+// HH表示24小时计时法  hh表示12小时计时法
+
+// SSS与ss
+// SSS表示毫秒  ss表示秒
+```
+
+
+
